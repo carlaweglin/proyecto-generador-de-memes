@@ -56,9 +56,9 @@ main div p {
     font-weight: bold;
 }
 
-/* --------- Aside ------------*/
+/* --------- Aside// Menu para cambiar valores ------------*/
 
-.aside {
+#aside-text, #aside-image {
     z-index: 10;
     height: 100vh;
     width: 15vw;
@@ -69,7 +69,14 @@ main div p {
     padding: 10px;
     color: white;
     padding: 15px;
+    
 }
+
+#aside-text {
+    display: none;
+}
+
+
 
 div h2 {
     text-align: center;
@@ -77,7 +84,7 @@ div h2 {
     margin-bottom: 40px;
 }
 
-.aside div {
+#aside-text div {
     margin-bottom: 25px;
 }
 
@@ -92,3 +99,5 @@ textarea {
     border-radius: 5px;
     padding: 5px;
 }
+
+
