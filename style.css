@@ -137,7 +137,6 @@ div.control-filter div input {
 
 #aside-text,
 #aside-image {
-  z-index: 10;
   height: 100vh;
   width: 15vw;
   position: fixed;
@@ -149,8 +148,12 @@ div.control-filter div input {
   padding: 15px;
 }
 
-#aside-text {
-  display: none;
+#aside-image {
+    z-index: 10;
+}
+
+.display-none {
+    display: none;
 }
 
 div h2 {
@@ -264,3 +267,36 @@ button#download-meme {
 button#download-meme:hover {
     background-color: rgb(47, 150, 47);
 }
+
+/* FIN--- boton descarga meme */ 
+
+/*estilado MODO CLARO */
+
+/*para el header */
+
+.light-mode-header {
+    color: rgb(41, 36, 36);
+    background-color: lightgray;
+}
+
+/*para los botones dentro del header*/
+
+.light-mode-button-header {
+    background-color: transparent;
+    color: rgb(41, 36, 36);
+}
+
+/* para el main*/
+
+.light-mode-main {
+    background-color: rgb(231, 229, 229);
+}
+
+/* para los aside */
+
+.light-mode-aside {
+    background-color: white;
+    color: rgb(41, 36, 36);
+}
+
+
