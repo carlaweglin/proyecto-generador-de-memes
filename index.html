@@ -16,9 +16,9 @@
     <header>
         <h1>Generador de Memes</h1>
         <div>
-            <button><i class="fa-solid fa-font"></i> Texto</button>
             <button><i class="fa-regular fa-image"></i> Imagen</button>
-            <button>
+            <button><i class="fa-solid fa-font"></i> Texto</button>
+            <button class="view-mode">
                 <i class="fa-solid fa-circle-half-stroke"></i> Modo Oscuro
             </button>
         </div>
@@ -28,10 +28,67 @@
             <p>TOP TEXT</p>
             <p>BOTTOM TEXT</p>
         </div>
-        <button id="download-meme">Descargar meme</button>
+        <button id="download-meme"><i class="fa-sharp fa-solid fa-download"></i> DESCARGAR MEME</button>
     </main>
 
-    <!-- Aside 1 // Menu para cambiar valores de texto-->
+    <!-- Aside IMAGEN //  Menu para cambiar valores de imagen-->
+
+    <div id="aside-image">
+        <h2>IMAGEN</h2>
+        <div class="control-url-img">
+            <h4>URL</h4>
+            <input type="text" id="img-url" />
+        </div>
+
+        <div class="control">
+            <h4>FONDO</h4>
+            <div class="img-background">
+                <input type="color" />
+                <select name="option-background" id="option-background">
+                    <option value="ninguno">Ninguno</option>
+                    <option value="aclarar">Aclarar</option>
+                    <option value="oscurecer">Oscurecer</option>
+                    <option value="diferencia">Diferencia</option>
+                    <option value="luminosidad">Luminosidad</option>
+                    <option value="multiplicar">Multiplicar</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="control-filter">
+            <h4>FILTROS</h4>
+            <div class="control-shiny">
+                <label for="">BRILLO</label>
+                <input type="range" id="range-shiny" min="0" max="1" value="0" step="0.2" />
+            </div>
+            <div class="control-opacity">
+                <label for="">OPACIDAD</label>
+                <input type="range" id="range-shiny" min="0" max="1" value="0" step="0.2" />
+            </div>
+            <div class="control-contrast">
+                <label for="">CONTRASTE</label>
+                <input type="range" id="range-shiny" min="0" max="1" value="0" step="0.2" />
+            </div>
+            <div class="control-blur">
+                <label for="">DESENFOQUE</label>
+                <input type="range" id="range-shiny" min="0" max="1" value="0" step="0.2" />
+            </div>
+            <div class="control-saturation">
+                <label for="">SATURADO</label>
+                <input type="range" id="range-shiny" min="0" max="1" value="0" step="0.2" />
+            </div>
+            <div class="control-negative">
+                <label for="">NEGATIVO</label>
+                <input type="range" id="range-shiny" min="0" max="1" value="0" step="0.2" />
+            </div>
+        </div>
+
+        <button id="reset-values">Reestablecer valores</button>
+    </div>
+
+    <!-- FIN Aside IMAGEN //  Menu para cambiar valores de imagen-->
+
+    <!-- Aside texto // Menu para cambiar valores de texto-->
 
     <div id="aside-text">
         <h2>TEXTO</h2>
@@ -69,21 +126,26 @@
             </div>
         </div>
 
+        <!-- Color y fondo del texto-->
+
         <div class="control">
-            <div class="color-text">
-                <h4>Color</h4>
-                <input type="color" />
-            </div>
-            <div class="color-background">
-                <h4>Fondo</h4>
-                <input type="color" />
+            <div class="flex-container-color-background">
+                <div class="color-text">
+                    <h4>Color</h4>
+                    <input type="color" />
+                </div>
+                <div class="color-background">
+                    <h4>Fondo</h4>
+                    <input type="color" />
+                </div>
             </div>
             <div class="not-background">
                 <input type="checkbox" id="not-background" />
                 <label for="not-background">Fondo transparente</label>
             </div>
         </div>
-
+        <!-- fin Color y fondo del texto-->
+        <!-- contorno, espaciado e interlineado de texto-->
         <div class="control">
             <h4>Contorno</h4>
             <div class="btn-outline">
@@ -93,11 +155,11 @@
             </div>
         </div>
 
-        <div class="control">
-            <h4>Estaciado</h4>
+        <div class="control-spacing">
+            <h4>Espaciado</h4>
             <input type="number" min="10" max="50" />
         </div>
-        <div class="control">
+        <div class="control-linespacing">
             <h4>Interlineado</h4>
             <select name="interlineado" id="interlineado">
                 <option value="0.8">0.8</option>
@@ -108,63 +170,11 @@
                 <option value="2.5">2.5</option>
             </select>
         </div>
+        <!-- contorno, espaciado e interlineado de texto-->
     </div>
 
-    <!-- FIN Aside 1 // Menu para cambiar valores de texto-->
+    <!-- FIN Aside texto // Menu para cambiar valores de texto-->
 
-    <!-- Aside 2 // Menu para cambiar valores de imagen -->
-    <div id="aside-image">
-        <h2>IMAGEN</h2>
-        <div class="control">
-            <h4>URL</h4>
-            <input type="text" id="img-url" />
-        </div>
-
-        <div class="control">
-            <h4>Fondo</h4>
-            <div class="img-background">
-                <input type="color" />
-                <select name="option-background" id="option-background">
-                    <option value="ninguno">Ninguno</option>
-                    <option value="aclarar">Aclarar</option>
-                    <option value="oscurecer">Oscurecer</option>
-                    <option value="diferencia">Diferencia</option>
-                    <option value="luminosidad">Luminosidad</option>
-                    <option value="multiplicar">Multiplicar</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="control-filter">
-            <h4>Filtros</h4>
-            <div class="control-shiny">
-                <label for="">BRILLO</label>
-                <input type="range" id="range-shiny" min="0" max="1" value="0" step="0.2" />
-            </div>
-            <div class="control-opacity">
-                <label for="">OPACIDAD</label>
-                <input type="range" id="range-shiny" min="0" max="1" value="0" step="0.2" />
-            </div>
-            <div class="control-contrast">
-                <label for="">CONTRASTE</label>
-                <input type="range" id="range-shiny" min="0" max="1" value="0" step="0.2" />
-            </div>
-            <div class="control-blur">
-                <label for="">DESENFOQUE</label>
-                <input type="range" id="range-shiny" min="0" max="1" value="0" step="0.2" />
-            </div>
-            <div class="control-saturation">
-                <label for="">SATURADO</label>
-                <input type="range" id="range-shiny" min="0" max="1" value="0" step="0.2" />
-            </div>
-            <div class="control-negative">
-                <label for="">NEGATIVO</label>
-                <input type="range" id="range-shiny" min="0" max="1" value="0" step="0.2" />
-            </div>
-        </div>
-
-        <button>Reestablecer valores</button>
-    </div>
 
     <script src="main.js"></script>
 </body>
