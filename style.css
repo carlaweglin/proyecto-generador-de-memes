@@ -58,6 +58,12 @@ main div {
   margin-bottom: 50px;
 }
 
+#img-container {
+  background-image: ;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 main div p {
   background-color: white;
   width: 100%;
@@ -130,13 +136,13 @@ div.control-filter div input {
   background-color: rgb(58, 59, 78);
 }
 
-
 /* FIN --- ASIDE // IMAGEN */
 
 /* --------- ASIDE// TEXTO------------*/
 
 #aside-text,
 #aside-image {
+  z-index: 10;
   height: 100vh;
   width: 15vw;
   position: fixed;
@@ -148,12 +154,8 @@ div.control-filter div input {
   padding: 15px;
 }
 
-#aside-image {
-    z-index: 10;
-}
-
 .display-none {
-    display: none;
+  display: none;
 }
 
 div h2 {
@@ -256,47 +258,45 @@ div.text-size-aligned button {
 /* boton descarga meme */
 
 button#download-meme {
-    background-color: green;
-    border: none;
-    border-radius: 7px;
-    padding: 15px;
-    color: white;
-    cursor: pointer;
+  background-color: green;
+  border: none;
+  border-radius: 7px;
+  padding: 15px;
+  color: white;
+  cursor: pointer;
 }
 
 button#download-meme:hover {
-    background-color: rgb(47, 150, 47);
+  background-color: rgb(47, 150, 47);
 }
 
-/* FIN--- boton descarga meme */ 
+/* FIN--- boton descarga meme */
 
 /*estilado MODO CLARO */
 
 /*para el header */
 
 .light-mode-header {
-    color: rgb(41, 36, 36);
-    background-color: lightgray;
+  color: rgb(41, 36, 36);
+  background-color: lightgray;
 }
 
 /*para los botones dentro del header*/
 
 .light-mode-button-header {
-    background-color: transparent;
-    color: rgb(41, 36, 36);
+  background-color: transparent;
+  color: rgb(41, 36, 36);
 }
 
 /* para el main*/
 
 .light-mode-main {
-    background-color: rgb(231, 229, 229);
+  background-color: rgb(231, 229, 229);
 }
 
 /* para los aside */
 
 .light-mode-aside {
-    background-color: white;
-    color: rgb(41, 36, 36);
+  background-color: white;
+  color: rgb(41, 36, 36);
 }
-
-
