@@ -59,9 +59,11 @@ main div {
 }
 
 #img-container {
+  background: black;
   background-image: ;
   background-repeat: no-repeat;
   background-position: center;
+  background-blend-mode: normal;
 }
 
 main div p {

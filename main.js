@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-
+const $$ = (selector) => document.querySelectorAll(selector);
 
 // VARIABLES // 
 
@@ -9,13 +9,14 @@ let asideImage = $('#aside-image');
 let asideText = $('#aside-text');
 let inputUrl = $('#img-url');
 let containerMeme = $('#img-container');
+let inputBackgroundColor = $('#input-background-color');
+let selectBlendMode = $('#option-background');
 
 
+console.log(selectBlendMode);
 
 
-
-
-// eventos // 
+// EVENTOS // 
 
 
 // visualizacion de aside imagen y texto //
@@ -38,11 +39,45 @@ btnImage.addEventListener('click', () => {
 
 inputUrl.addEventListener('input', (event) => {
     let url = event.target.value;
-    console.log(url);
     containerMeme.style.backgroundImage = `url(${url})`;
 
 })
 
+// cambiar color de fondo contenedor // 
+
+inputBackgroundColor.addEventListener('change', (event) => {
+    let colorBack = event.target.value;
+    containerMeme.style.backgroundColor = colorBack; 
+    
+
+})
+
+// Cambiar modo de mezcla de fondo //
+
+selectBlendMode.addEventListener('click',(event) => {
+    value = event.target.value
+    switch (value) {
+        case 'ninguno':
+            containerMeme.style.backgroundBlendMode = 'normal';
+            break;
+        case 'aclarar':
+            containerMeme.style.backgroundBlendMode = 'lighten';
+            break;
+        case 'oscurecer':
+            containerMeme.style.backgroundBlendMode = 'darken';
+            break;
+        case 'diferencia':
+            containerMeme.style.backgroundBlendMode = 'difference';
+            break;
+        case 'luminosidad':
+            containerMeme.style.backgroundBlendMode = 'luminosity';
+            break;
+        case 'multiplicar':
+            containerMeme.style.backgroundBlendMode = 'multiply';
+            break;    
+    
+    }
+})
 
 
 
