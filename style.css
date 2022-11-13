@@ -59,8 +59,8 @@ main {
 }
 
 #principal-img-container {
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
   background-image: ;
   background-repeat: no-repeat;
   background-position: center;
@@ -72,15 +72,17 @@ main div p {
   background-color: white;
   width: 100%;
   height: 18%;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 40px;
   font-weight: bold;
+  padding: 10px;
 }
 
-
+.background-transparent {
+    background-color: transparent;
+}
 
 /* ASIDE // IMAGEN */
 
@@ -158,6 +160,7 @@ div.control-filter div input {
   padding: 10px;
   color: white;
   padding: 15px;
+  overflow-y: auto;
 }
 
 .display-none {
@@ -188,7 +191,7 @@ textarea {
   color: white;
 }
 
-select#option-fontfamily {
+select#option-font-family {
   background-color: rgb(48, 49, 70);
   border: none;
   border-radius: 5px;
@@ -209,6 +212,7 @@ div.text-size-aligned button {
   border-radius: 5px;
   padding: 10px;
   color: white;
+  cursor: pointer;
 }
 
 div.text-size-aligned input#font-size {
@@ -217,7 +221,12 @@ div.text-size-aligned input#font-size {
 
 div.text-size-aligned button {
   width: 14%;
+  
 }
+
+div.text-size-aligned button:hover {
+    background-color: rgb(58, 59, 78);
+} 
 
 .flex-container-color-background {
   display: flex;

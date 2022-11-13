@@ -196,19 +196,19 @@
       </div>
       <div class="control">
         <h4>FUENTE</h4>
-        <select name="Seleccion de fuente" id="option-fontfamily">
-          <option value="Verdana">Verdana</option>
-          <option value="Courier New">Courier New</option>
-          <option value="Georgia">Georgia</option>
-          <option value="Times New Roman">Times New Roman</option>
-          <option value="Lucida Sans">Lucida Sans</option>
+        <select name="Seleccion de fuente" id="option-font-family">
+          <option value="verdana">Verdana</option>
+          <option value="courier New">Courier New</option>
+          <option value="georgia">Georgia</option>
+          <option value="times New Roman">Times New Roman</option>
+          <option value="lucida Sans">Lucida Sans</option>
         </select>
 
         <div class="text-size-aligned">
-          <input type="number" id="font-size" min="25" max="70" value="25" />
-          <button><i class="fa-solid fa-align-left"></i></button>
-          <button><i class="fa-solid fa-align-center"></i></button>
-          <button><i class="fa-solid fa-align-right"></i></button>
+          <input type="number" id="font-size" min="25" max="70" value="40" step="1" />
+          <button id="btn-left"><i class="fa-solid fa-align-left"></i></button>
+          <button id="btn-center"><i class="fa-solid fa-align-center"></i></button>
+          <button id="btn-right"><i class="fa-solid fa-align-right"></i></button>
         </div>
       </div>
 
@@ -218,15 +218,15 @@
         <div class="flex-container-color-background">
           <div class="color-text">
             <h4>Color</h4>
-            <input type="color" />
+            <input id="color-text" type="color" />
           </div>
-          <div class="color-background">
+          <div id="text-background" class="color-background">
             <h4>Fondo</h4>
             <input type="color" />
           </div>
         </div>
         <div class="not-background">
-          <input type="checkbox" id="not-background" />
+          <input type="checkbox" id="not-background-color" />
           <label for="not-background">Fondo transparente</label>
         </div>
       </div>
@@ -235,19 +235,19 @@
       <div class="control">
         <h4>Contorno</h4>
         <div class="btn-outline">
-          <button>Ninguno</button>
-          <button>Claro</button>
-          <button>Oscuro</button>
+          <button id="outline-none" >Ninguno</button>
+          <button id="outline-light">Claro</button>
+          <button id="outline-dark">Oscuro</button>
         </div>
       </div>
 
       <div class="control-spacing">
         <h4>Espaciado</h4>
-        <input type="number" min="10" max="50" />
+        <input id="input-spacing" type="number" min="10" max="50" />
       </div>
       <div class="control-linespacing">
         <h4>Interlineado</h4>
-        <select name="interlineado" id="interlineado">
+        <select name="interlineado" id="input-linespacing">
           <option value="0.8">0.8</option>
           <option value="1">1</option>
           <option value="1.2">1.2</option>

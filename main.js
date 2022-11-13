@@ -40,10 +40,24 @@ let inputTopText = $("#top-text");
 let inputBottomText = $("#text-bottom");
 let texTop = $(".top-text");
 let bottomText = $(".bottom-text");
-let checkToptext = $('#check-toptext');
-let checkBottomtext = $('#check-bottomtext');
+let checkToptext = $("#check-toptext");
+let checkBottomtext = $("#check-bottomtext");
+let optionFontFamily = $("#option-font-family");
+let inputFontSize = $('#font-size');
+let btnLeft = $('#btn-left');
+let btnCenter = $('#btn-center');
+let btnRight = $('#btn-right');
+let colorText = $('#color-text');
+let inputTextBackground = $('#text-background');
+let notBackground = $('#not-background-color');
+let btnOutlineNone = $('#outline-none');
+let btnOutlineLight = $('#outline-light');
+let btnOutlineDark = $('#outline-dark');
+let inputSpacing = $('#input-spacing');
+let inputLinespacing = $('#input-linespacing');
 
-console.log(texTop);
+
+console.log(inputLinespacing);
 
 //FUNCIONES //
 
@@ -176,16 +190,118 @@ inputBottomText.addEventListener("input", (event) => {
 
 // con/sin texto //
 
-checkToptext.addEventListener('click', () => {
-    texTop.classList.toggle("display-none"); 
+checkToptext.addEventListener("click", () => {
+  texTop.classList.toggle("display-none");
+});
+
+checkBottomtext.addEventListener("click", () => {
+  bottomText.classList.toggle("display-none");
+});
+
+//fuente//
+
+optionFontFamily.addEventListener("change", (event) => {
+  let value = event.target.value;
+  switch (value) {
+    case "verdana":
+      texTop.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
+      bottomText.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
+      break;
+    case "courier New":
+      texTop.style.fontFamily = "'Courier New', Courier, monospace";
+      bottomText.style.fontFamily = "'Courier New', Courier, monospace";
+      break;
+    case "georgia":
+      texTop.style.fontFamily = "Georgia, 'Times New Roman', Times, serif";
+      bottomText.style.fontFamily = "Georgia, 'Times New Roman', Times, serif";
+      break;
+    case "times New Roman":
+      texTop.style.fontFamily = "'Times New Roman', Times, serif";
+      bottomText.style.fontFamily = "'Times New Roman', Times, serif";
+      break;
+    case "lucida Sans":
+      texTop.style.fontFamily =
+        "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif";
+      bottomText.style.fontFamily =
+        "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif";
+      break;
+  }
+});
+
+// tamaño fuente // 
+inputFontSize.addEventListener('change', (event) => {
+    texTop.style.fontSize = `${event.target.value}px`;
+    bottomText.style.fontSize = `${event.target.value}px`;
 })
 
-checkBottomtext.addEventListener('click', () => {
-    bottomText.classList.toggle("display-none"); 
+//alineacion texto // 
+
+btnLeft.addEventListener('click', () => {
+    texTop.style.justifyContent = "flex-start";
+    bottomText.style.justifyContent = "flex-start";
 })
 
+btnCenter.addEventListener('click', () => {
+    texTop.style.justifyContent = "center";
+    bottomText.style.justifyContent = "center";
+})
 
+btnRight.addEventListener('click', () => {
+    texTop.style.justifyContent = "flex-end";
+    bottomText.style.justifyContent = "flex-end";
+})
 
+// color y fondo de texto // 
+
+colorText.addEventListener('change',(event) => {
+    let value = event.target.value;
+    texTop.style.color = `${value}`;
+    bottomText.style.color = `${value}`;
+})
+
+inputTextBackground.addEventListener('change',(event) => {
+    let value = event.target.value;
+    texTop.style.backgroundColor = `${value}`;
+    bottomText.style.backgroundColor = `${value}`;
+})
+
+notBackground.addEventListener('change',() => {
+    texTop.classList.toggle("background-transparent");
+    bottomText.classList.toggle("background-transparent");
+})
+
+// contorno // 
+
+btnOutlineDark.addEventListener('click', () => {
+    texTop.style.textShadow = "3px -2px 0px rgba(3,3,3,0.65)";
+    bottomText.style.textShadow = "3px -2px 0px rgba(3,3,3,0.65)";
+})
+
+btnOutlineLight.addEventListener('click', () => {
+    texTop.style.textShadow = "3px -2px 0px rgba(255,255,255,0.65)";
+    bottomText.style.textShadow = "3px -2px 0px rgba(255,255,255,0.65)";
+})
+
+btnOutlineNone.addEventListener('click', () => {
+    texTop.style.textShadow = "0px 0px 0px rgba(255,255,255,0.65)";
+    bottomText.style.textShadow = "0px 0px 0px rgba(255,255,255,0.65)";
+})
+
+//espaciado // 
+
+inputSpacing.addEventListener('change',(event) => {
+    let value = event.target.value;
+    texTop.style.padding = `${value}px`;
+    bottomText.style.padding = `${value}px`;
+})
+
+//interlineado //
+
+inputLinespacing.addEventListener('change',(event) => {
+    let value = event.target.value;
+    texTop.style.lineHeight = `${value}`;
+    bottomText.style.lineHeight = `${value}`;
+})
 
 
 // Modo claro, modo Oscuro //
