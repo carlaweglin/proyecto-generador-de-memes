@@ -46,7 +46,7 @@ main {
   flex-direction: column;
 }
 
-main div {
+#img-container {
   background: black;
   width: 30%;
   height: 75%;
@@ -58,12 +58,14 @@ main div {
   margin-bottom: 50px;
 }
 
-#img-container {
-  background: black;
+#principal-img-container {
+  width: 100% !important; 
+  height: 100%; 
   background-image: ;
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: normal;
+  background-size: cover;
 }
 
 main div p {
