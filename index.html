@@ -44,9 +44,9 @@
     </header>
     <main>
       <div id="img-container">
-        <p>TOP TEXT</p>
+        <p class="top-text">TOP TEXT</p>
         <div id="principal-img-container"></div>
-        <p>BOTTOM TEXT</p>
+        <p class="bottom-text">BOTTOM TEXT</p>
       </div>
       <button id="download-meme">
         <i class="fa-sharp fa-solid fa-download"></i> DESCARGAR MEME
@@ -180,7 +180,7 @@
       <h2>TEXTO</h2>
       <div class="control">
         <h4>SUPERIOR</h4>
-        <textarea placeholder="TOP TEXT"></textarea>
+        <textarea id="top-text" placeholder="TOP TEXT"></textarea>
         <div class="check-control-top-text">
           <input type="checkbox" id="check-toptext" />
           <label for="check-toptext">Sin texto superior</label>
@@ -188,7 +188,7 @@
       </div>
       <div class="control">
         <h4>INFERIOR</h4>
-        <textarea placeholder="BOTTOM TEXT"></textarea>
+        <textarea id="text-bottom" placeholder="BOTTOM TEXT"></textarea>
         <div class="check-control-top-text">
           <input type="checkbox" id="check-bottomtext" />
           <label for="check-bottomtext">Sin texto inferior</label>
