@@ -98,7 +98,7 @@ main div p {
 /* INPUT URL */
 .control-url-img input,
 #aside-image button {
-  background-color: rgb(48, 49, 70);
+  background-color: rgb(110, 110, 141);
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -112,7 +112,7 @@ main div p {
 .img-background input,
 select#option-background {
   width: 30%;
-  background-color: rgb(48, 49, 70);
+  background-color: rgb(110, 110, 141);
   border: none;
   border-radius: 5px;
 }
@@ -145,7 +145,7 @@ div.control-filter div input {
 
 #aside-image button:hover {
   cursor: pointer;
-  background-color: rgb(58, 59, 78);
+  background-color: rgb(141, 141, 150);
 }
 
 /* FIN --- ASIDE // IMAGEN */
@@ -193,7 +193,7 @@ h4 {
 
 textarea {
   width: 100%;
-  background-color: rgb(48, 49, 70);
+  background-color: rgb(110, 110, 141);
   border: none;
   border-radius: 5px;
   padding: 5px;
@@ -202,7 +202,7 @@ textarea {
 }
 
 select#option-font-family {
-  background-color: rgb(48, 49, 70);
+  background-color: rgb(110, 110, 141);
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -217,7 +217,7 @@ div.text-size-aligned {
 
 div.text-size-aligned input#font-size,
 div.text-size-aligned button {
-  background-color: rgb(48, 49, 70);
+  background-color: rgb(110, 110, 141);
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -250,7 +250,7 @@ div.text-size-aligned button:hover {
 .color-text input,
 .color-background input {
   width: 50%;
-  background-color: rgb(48, 49, 70);
+  background-color: rgb(110, 110, 141);
   border: none;
   border-radius: 5px;
 }
@@ -262,7 +262,7 @@ div.text-size-aligned button:hover {
 .btn-outline button,
 .control-spacing input,
 .control-linespacing select {
-  background-color: rgb(48, 49, 70);
+  background-color: rgb(110, 110, 141);
   border: none;
   border-radius: 5px;
   padding: 10px;
