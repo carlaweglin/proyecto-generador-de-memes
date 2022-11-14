@@ -55,9 +55,15 @@ let btnOutlineLight = $('#outline-light');
 let btnOutlineDark = $('#outline-dark');
 let inputSpacing = $('#input-spacing');
 let inputLinespacing = $('#input-linespacing');
+let viewModeDark = $('.view-mode-dark');
+let viewModeLight = $('.view-mode-light');
+let header = document.getElementsByTagName('header');
+let tagH1 = document.getElementsByTagName('h1');
+let main = $('main');
+let inputs = $$('input');
 
 
-console.log(inputLinespacing);
+console.log(inputs);
 
 //FUNCIONES //
 
@@ -305,3 +311,34 @@ inputLinespacing.addEventListener('change',(event) => {
 
 
 // Modo claro, modo Oscuro //
+
+viewModeDark.addEventListener('click', () => {
+    viewModeDark.style.display = "none";
+    viewModeLight.style.display = "inline";
+    header[0].classList.add("light-mode-header");
+    tagH1[0].classList.add('light-mode-text');
+    main.classList.add('light-mode-main');
+    asideImage.classList.add('light-mode-aside');
+    asideText.classList.add('light-mode-aside');
+    btnText.classList.add('light-mode-btn');
+    btnImage.classList.add('light-mode-btn');
+    viewModeLight.classList.add('light-mode-btn');
+    inputUrl.classList.add('light-mode-main');
+    
+})
+
+viewModeLight.addEventListener('click', () => {
+    viewModeLight.style.display = "none";
+    viewModeDark.style.display = "inline";
+    header[0].classList.remove("light-mode-header");
+    tagH1[0].classList.remove('light-mode-text'); 
+    main.classList.remove('light-mode-main');
+    asideImage.classList.remove('light-mode-aside');
+    asideText.classList.remove('light-mode-aside'); 
+    btnText.classList.remove('light-mode-btn');
+    btnImage.classList.remove('light-mode-btn');
+    viewModeDark.classList.remove('light-mode-btn');
+    inputUrl.classList.remove('light-mode-main');
+})
+
+

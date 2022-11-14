@@ -21,13 +21,17 @@ header button {
   border: none;
   border-radius: 5px;
   padding: 10px;
-  width: 150px;
+  width: 140px;
   color: white;
 }
 
 header button:hover {
   cursor: pointer;
   background-color: rgb(58, 59, 78);
+}
+
+.view-mode-light {
+  display: none;
 }
 
 h1 {
@@ -81,7 +85,7 @@ main div p {
 }
 
 .background-transparent {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 /* ASIDE // IMAGEN */
@@ -148,9 +152,7 @@ div.control-filter div input {
 
 /* --------- ASIDE// TEXTO------------*/
 
-#aside-text,
-#aside-image {
-  z-index: 10;
+.aside {
   height: 100vh;
   width: 15vw;
   position: fixed;
@@ -161,6 +163,14 @@ div.control-filter div input {
   color: white;
   padding: 15px;
   overflow-y: auto;
+}
+
+#aside-text {
+    z-index: 10; 
+}
+
+#aside-image {
+    z-index: 15;
 }
 
 .display-none {
@@ -221,12 +231,11 @@ div.text-size-aligned input#font-size {
 
 div.text-size-aligned button {
   width: 14%;
-  
 }
 
 div.text-size-aligned button:hover {
-    background-color: rgb(58, 59, 78);
-} 
+  background-color: rgb(58, 59, 78);
+}
 
 .flex-container-color-background {
   display: flex;
@@ -292,16 +301,10 @@ button#download-meme:hover {
 /*para el header */
 
 .light-mode-header {
-  color: rgb(41, 36, 36);
-  background-color: lightgray;
+  background-color: rgb(201, 200, 200);
 }
 
-/*para los botones dentro del header*/
 
-.light-mode-button-header {
-  background-color: transparent;
-  color: rgb(41, 36, 36);
-}
 
 /* para el main*/
 
@@ -309,9 +312,20 @@ button#download-meme:hover {
   background-color: rgb(231, 229, 229);
 }
 
+.light-mode-text {
+  color: rgb(41, 36, 36);
+}
+
 /* para los aside */
 
 .light-mode-aside {
   background-color: white;
   color: rgb(41, 36, 36);
+}
+
+/*para botones*/
+
+.light-mode-btn {
+    background-color: azure;
+    color: rgb(41, 36, 36);
 }
