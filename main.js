@@ -24,9 +24,10 @@ let asideImage = $("#aside-image");
 let asideText = $("#aside-text");
 let inputUrl = $("#img-url");
 let containerMeme = $("#principal-img-container");
+let containerMeme2 = $("#img-container");
 let inputBackgroundColor = $("#input-background-color");
 let selectBlendMode = $("#option-background");
-let btnDownloadMeme = $("#download-meme"); // boton que descarga meme//
+let btnDownloadMeme = $("#download-meme"); 
 let inputControlShiny = $("#range-shiny");
 let inputControlOpacity = $("#range-opacity");
 let inputControlContrast = $("#range-contrast");
@@ -70,14 +71,17 @@ console.log(inputs);
 // funcion para descargar meme //
 
 const descargarMeme = () => {
-  domtoimage.toBlob(contenedorImagen).then(function (blob) {
-    saveAs(blob, "mi-meme.jpg");
+  domtoimage.toBlob(containerMeme2).then(function (blob) {
+    saveAs(blob, "mi-meme.png");
   });
 }; // cuando ejecuto funcion me deja de funcionar la imagen ?? //
 
 //------------------------------------------------------------------//
 
 // EVENTOS //
+
+//boton de descarga
+btnDownloadMeme.addEventListener("click", descargarMeme )
 
 // visualizacion de aside imagen y texto //
 

@@ -2,6 +2,11 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+body {
+    background: rgb(48, 49, 70);
 }
 
 /* ---------- HEADER -------------*/
@@ -14,6 +19,7 @@ header {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 header button {
@@ -58,7 +64,6 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
   margin-bottom: 50px;
 }
 
@@ -70,6 +75,7 @@ main {
   background-position: center;
   background-blend-mode: normal;
   background-size: cover;
+  
 }
 
 main div p {
